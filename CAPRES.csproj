@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CCE9F45-0DEE-41BC-9D74-77C680125352}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SmartSTART</RootNamespace>
+    <AssemblyName>SmartSTART</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="CAPRESConnectionString-Deployment" Order="1">
+          <Destination Path="Data Source=JEANO-PC\JARR%3bInitial Catalog=CAPRES%3bUser ID=sa%3bPassword=benilde" />
+          <Object Type="dbFullSql">
+            <PreSource Path="Data Source=JEANO-PC\JARR%3bInitial Catalog=CAPRES%3bUser ID=sa%3bPassword=benilde" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" />
+            <Source Path="obj\Debug\AutoScripts\CAPRESConnectionString-Deployment_SchemaAndData.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <DesktopBuildPackageLocation>obj\Debug\Package\SmartSTART.zip</DesktopBuildPackageLocation>
+    <DeployIisAppPath>Default Web Site/SmartSTART_deploy</DeployIisAppPath>
+    <PublishDatabases>false</PublishDatabases>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>E:\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminHome.aspx" />
+    <Content Include="ApplicantAFE.aspx" />
+    <Content Include="ApplicantEducationalForm.aspx" />
+    <Content Include="ApplicantEmploymentForm.aspx" />
+    <Content Include="ApplicantFamilyForm.aspx" />
+    <Content Include="ApplicantFinished.aspx" />
+    <Content Include="ApplicantHome.aspx" />
+    <Content Include="ApplicantOrganizationalForm.aspx" />
+    <Content Include="ApplicantOtherQualificationsForm.aspx" />
+    <Content Include="ApplicantPersonalForm.aspx" />
+    <Content Include="ApplicantPersonalReferencesForm.aspx" />
+    <Content Include="ApplicantPrint.aspx" />
+    <Content Include="ApplicantProfessionalReferencesForm.aspx" />
+    <Content Include="ApplicantReviewForm.aspx" />
+    <Content Include="assets\css\bootstrap.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\styles.css" />
+    <Content Include="assets\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\images\linear_gradient_blue.png" />
+    <Content Include="assets\images\SmartCareers.png" />
+    <Content Include="assets\images\SmartSTART.png" />
+    <Content Include="assets\images\SmartSTART_alt.png" />
+    <Content Include="assets\js\bootstrap.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\jquery-2.1.4.js" />
+    <Content Include="assets\js\jquery-2.1.4.min.js" />
+    <Content Include="assets\js\script.js" />
+    <Content Include="DataManagerHome.aspx" />
+    <Content Include="HiringHome.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="PreboarderHome.aspx" />
+    <Content Include="PreboardingHome.aspx" />
+    <Content Include="PreboarderViewApplication.aspx" />
+    <Content Include="RecruiterHome.aspx" />
+    <Content Include="RecruiterViewApplication.aspx" />
+    <Content Include="test.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminHome.aspx.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminHome.aspx.designer.cs">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantAFE.aspx.cs">
+      <DependentUpon>ApplicantAFE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantAFE.aspx.designer.cs">
+      <DependentUpon>ApplicantAFE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantEducationalForm.aspx.cs">
+      <DependentUpon>ApplicantEducationalForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantEducationalForm.aspx.designer.cs">
+      <DependentUpon>ApplicantEducationalForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantEmploymentForm.aspx.cs">
+      <DependentUpon>ApplicantEmploymentForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantEmploymentForm.aspx.designer.cs">
+      <DependentUpon>ApplicantEmploymentForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantFamilyForm.aspx.cs">
+      <DependentUpon>ApplicantFamilyForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantFamilyForm.aspx.designer.cs">
+      <DependentUpon>ApplicantFamilyForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantFinished.aspx.cs">
+      <DependentUpon>ApplicantFinished.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantFinished.aspx.designer.cs">
+      <DependentUpon>ApplicantFinished.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantHome.aspx.cs">
+      <DependentUpon>ApplicantHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantHome.aspx.designer.cs">
+      <DependentUpon>ApplicantHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantOrganizationalForm.aspx.cs">
+      <DependentUpon>ApplicantOrganizationalForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantOrganizationalForm.aspx.designer.cs">
+      <DependentUpon>ApplicantOrganizationalForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantOtherQualificationsForm.aspx.cs">
+      <DependentUpon>ApplicantOtherQualificationsForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantOtherQualificationsForm.aspx.designer.cs">
+      <DependentUpon>ApplicantOtherQualificationsForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantPersonalForm.aspx.cs">
+      <DependentUpon>ApplicantPersonalForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantPersonalForm.aspx.designer.cs">
+      <DependentUpon>ApplicantPersonalForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantPersonalReferencesForm.aspx.cs">
+      <DependentUpon>ApplicantPersonalReferencesForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantPersonalReferencesForm.aspx.designer.cs">
+      <DependentUpon>ApplicantPersonalReferencesForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantPrint.aspx.cs">
+      <DependentUpon>ApplicantPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantPrint.aspx.designer.cs">
+      <DependentUpon>ApplicantPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantProfessionalReferencesForm.aspx.cs">
+      <DependentUpon>ApplicantProfessionalReferencesForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantProfessionalReferencesForm.aspx.designer.cs">
+      <DependentUpon>ApplicantProfessionalReferencesForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicantReviewForm.aspx.cs">
+      <DependentUpon>ApplicantReviewForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ApplicantReviewForm.aspx.designer.cs">
+      <DependentUpon>ApplicantReviewForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLogicObjects\AFEBLO.cs" />
+    <Compile Include="BusinessLogicObjects\AffixBLO.cs" />
+    <Compile Include="BusinessLogicObjects\AnswerBLO.cs" />
+    <Compile Include="BusinessLogicObjects\BloodTypeBLO.cs" />
+    <Compile Include="BusinessLogicObjects\BranchOfStudyBLO.cs" />
+    <Compile Include="BusinessLogicObjects\CandidateBLO.cs" />
+    <Compile Include="BusinessLogicObjects\CertificateBLO.cs" />
+    <Compile Include="BusinessLogicObjects\CivilStatusBLO.cs" />
+    <Compile Include="BusinessLogicObjects\CountryBLO.cs" />
+    <Compile Include="BusinessLogicObjects\EducationEstablishmentBLO.cs" />
+    <Compile Include="BusinessLogicObjects\EmailHelper.cs" />
+    <Compile Include="BusinessLogicObjects\EstablishmentBranchBLO.cs" />
+    <Compile Include="BusinessLogicObjects\EstablishmentCertificateBLO.cs" />
+    <Compile Include="BusinessLogicObjects\EstablishmentSchoolBLO.cs" />
+    <Compile Include="BusinessLogicObjects\FamilyMemberBLO.cs" />
+    <Compile Include="BusinessLogicObjects\File1BLO.cs" />
+    <Compile Include="BusinessLogicObjects\File2BLO.cs" />
+    <Compile Include="BusinessLogicObjects\File3BLO.cs" />
+    <Compile Include="BusinessLogicObjects\File4BLO.cs" />
+    <Compile Include="BusinessLogicObjects\File5BLO.cs" />
+    <Compile Include="BusinessLogicObjects\GenderBLO.cs" />
+    <Compile Include="BusinessLogicObjects\HRBLO.cs" />
+    <Compile Include="BusinessLogicObjects\IndustryBLO.cs" />
+    <Compile Include="BusinessLogicObjects\LicenseBLO.cs" />
+    <Compile Include="BusinessLogicObjects\NationalityBLO.cs" />
+    <Compile Include="BusinessLogicObjects\OrganizationTypeBLO.cs" />
+    <Compile Include="BusinessLogicObjects\PasswordHelper.cs" />
+    <Compile Include="BusinessLogicObjects\PersonalReferenceBLO.cs" />
+    <Compile Include="BusinessLogicObjects\PositionTypeBLO.cs" />
+    <Compile Include="BusinessLogicObjects\ProfessionalReferenceBLO.cs" />
+    <Compile Include="BusinessLogicObjects\QualificationBLO.cs" />
+    <Compile Include="BusinessLogicObjects\QuestionBLO.cs" />
+    <Compile Include="BusinessLogicObjects\ReasonBLO.cs" />
+    <Compile Include="BusinessLogicObjects\ReligionBLO.cs" />
+    <Compile Include="BusinessLogicObjects\SchoolBLO.cs" />
+    <Compile Include="BusinessLogicObjects\SpecializationBLO.cs" />
+    <Compile Include="BusinessLogicObjects\SpecifyGeneralBLO.cs" />
+    <Compile Include="BusinessLogicObjects\SpecifyRelativeBLO.cs" />
+    <Compile Include="DataAccessObjects\AFEDAO.cs" />
+    <Compile Include="DataAccessObjects\AffixDAO.cs" />
+    <Compile Include="DataAccessObjects\AnswerDAO.cs" />
+    <Compile Include="DataAccessObjects\BloodTypeDAO.cs" />
+    <Compile Include="DataAccessObjects\BranchOfStudyDAO.cs" />
+    <Compile Include="DataAccessObjects\CandidateDAO.cs" />
+    <Compile Include="DataAccessObjects\CertificateDAO.cs" />
+    <Compile Include="DataAccessObjects\CivilStatusDAO.cs" />
+    <Compile Include="DataAccessObjects\CountryDAO.cs" />
+    <Compile Include="DataAccessObjects\DB.cs" />
+    <Compile Include="DataAccessObjects\EducationEstablishmentDAO.cs" />
+    <Compile Include="DataAccessObjects\EstablishmentBranchDAO.cs" />
+    <Compile Include="DataAccessObjects\EstablishmentCertificateDAO.cs" />
+    <Compile Include="DataAccessObjects\EstablishmentSchoolDAO.cs" />
+    <Compile Include="DataAccessObjects\FamilyMemberDAO.cs" />
+    <Compile Include="DataAccessObjects\File1DAO.cs" />
+    <Compile Include="DataAccessObjects\File2DAO.cs" />
+    <Compile Include="DataAccessObjects\File3DAO.cs" />
+    <Compile Include="DataAccessObjects\File4DAO.cs" />
+    <Compile Include="DataAccessObjects\File5DAO.cs" />
+    <Compile Include="DataAccessObjects\GenderDAO.cs" />
+    <Compile Include="DataAccessObjects\HRDAO.cs" />
+    <Compile Include="DataAccessObjects\IndustryDAO.cs" />
+    <Compile Include="DataAccessObjects\LicenseDAO.cs" />
+    <Compile Include="DataAccessObjects\NationalityDAO.cs" />
+    <Compile Include="DataAccessObjects\OrganizationTypeDAO.cs" />
+    <Compile Include="DataAccessObjects\PersonalReferenceDAO.cs" />
+    <Compile Include="DataAccessObjects\PositionTypeDAO.cs" />
+    <Compile Include="DataAccessObjects\ProfessionalReferenceDAO.cs" />
+    <Compile Include="DataAccessObjects\QualificationDAO.cs" />
+    <Compile Include="DataAccessObjects\QuestionDAO.cs" />
+    <Compile Include="DataAccessObjects\ReasonDAO.cs" />
+    <Compile Include="DataAccessObjects\ReligionDAO.cs" />
+    <Compile Include="DataAccessObjects\SchoolDAO.cs" />
+    <Compile Include="DataAccessObjects\SpecializationDAO.cs" />
+    <Compile Include="DataAccessObjects\SpecifyGeneralDAO.cs" />
+    <Compile Include="DataAccessObjects\SpecifyRelativeDAO.cs" />
+    <Compile Include="DataManagerHome.aspx.cs">
+      <DependentUpon>DataManagerHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataManagerHome.aspx.designer.cs">
+      <DependentUpon>DataManagerHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HiringHome.aspx.cs">
+      <DependentUpon>HiringHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HiringHome.aspx.designer.cs">
+      <DependentUpon>HiringHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreboarderHome.aspx.cs">
+      <DependentUpon>PreboarderHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreboarderHome.aspx.designer.cs">
+      <DependentUpon>PreboarderHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreboardingHome.aspx.cs">
+      <DependentUpon>PreboardingHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreboardingHome.aspx.designer.cs">
+      <DependentUpon>PreboardingHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PreboarderViewApplication.aspx.cs">
+      <DependentUpon>PreboarderViewApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PreboarderViewApplication.aspx.designer.cs">
+      <DependentUpon>PreboarderViewApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecruiterHome.aspx.cs">
+      <DependentUpon>RecruiterHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecruiterHome.aspx.designer.cs">
+      <DependentUpon>RecruiterHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RecruiterViewApplication.aspx.cs">
+      <DependentUpon>RecruiterViewApplication.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RecruiterViewApplication.aspx.designer.cs">
+      <DependentUpon>RecruiterViewApplication.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SmartStart.Master.cs">
+      <DependentUpon>SmartStart.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartStart.Master.designer.cs">
+      <DependentUpon>SmartStart.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SmartStartAdmin.master.cs">
+      <DependentUpon>SmartStartAdmin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SmartStartAdmin.master.designer.cs">
+      <DependentUpon>SmartStartAdmin.master</DependentUpon>
+    </Compile>
+    <Compile Include="test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValueObjects\AFEVO.cs" />
+    <Compile Include="ValueObjects\AffixVO.cs" />
+    <Compile Include="ValueObjects\AnswerVO.cs" />
+    <Compile Include="ValueObjects\BloodTypeVO.cs" />
+    <Compile Include="ValueObjects\BranchOfStudyVO.cs" />
+    <Compile Include="ValueObjects\CandidateVO.cs" />
+    <Compile Include="ValueObjects\CertificateVO.cs" />
+    <Compile Include="ValueObjects\CivilStatusVO.cs" />
+    <Compile Include="ValueObjects\CountryVO.cs" />
+    <Compile Include="ValueObjects\EducationEstablishmentVO.cs" />
+    <Compile Include="ValueObjects\FamilyMemberVO.cs" />
+    <Compile Include="ValueObjects\File1VO.cs" />
+    <Compile Include="ValueObjects\File2VO.cs" />
+    <Compile Include="ValueObjects\File3VO.cs" />
+    <Compile Include="ValueObjects\File4VO.cs" />
+    <Compile Include="ValueObjects\File5VO.cs" />
+    <Compile Include="ValueObjects\GenderVO.cs" />
+    <Compile Include="ValueObjects\HRVO.cs" />
+    <Compile Include="ValueObjects\IndustryVO.cs" />
+    <Compile Include="ValueObjects\NationalityVO.cs" />
+    <Compile Include="ValueObjects\OrganizationTypeVO.cs" />
+    <Compile Include="ValueObjects\PositionTypeVO.cs" />
+    <Compile Include="ValueObjects\ReasonVO.cs" />
+    <Compile Include="ValueObjects\ReligionVO.cs" />
+    <Compile Include="ValueObjects\SchoolVO.cs" />
+    <Compile Include="ValueObjects\SpecializationVO.cs" />
+    <Compile Include="ValueObjects\SpecifyGeneralVO.cs" />
+    <Compile Include="ValueObjects\SpecifyRelativeVO.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CSV\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="assets\css\bootstrap.css.map" />
+    <None Include="assets\fonts\FS_Joey-Bold.otf" />
+    <None Include="assets\fonts\FS_Joey-BoldItalic.otf" />
+    <None Include="assets\fonts\FS_Joey-Heavy.otf" />
+    <None Include="assets\fonts\FS_Joey-HeavyItalic.otf" />
+    <None Include="assets\fonts\FS_Joey-Italic.otf" />
+    <None Include="assets\fonts\FS_Joey-Light.otf" />
+    <None Include="assets\fonts\FS_Joey-LightItalic.otf" />
+    <None Include="assets\fonts\FS_Joey.otf" />
+    <None Include="assets\fonts\glyphicons-halflings-regular.eot" />
+    <None Include="assets\fonts\glyphicons-halflings-regular.ttf" />
+    <None Include="assets\fonts\glyphicons-halflings-regular.woff" />
+    <None Include="assets\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="SmartStart.Master" />
+    <Content Include="SmartStartAdmin.master" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2488</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

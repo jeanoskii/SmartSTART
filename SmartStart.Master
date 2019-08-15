@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SmartStart.master.cs" Inherits="CAPRES.SmartStart" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SmartSTART</title>
+    <!-- jQuery -->
+    <script src="assets/js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <!-- Bootstrap JS and CSS -->
+    <script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
+    <link href="assets/css/bootstrap.min.css?parameter=1" rel="stylesheet" />
+    <!-- Custom JS and CSS -->
+    <script src="assets/js/script.js" type="text/javascript"></script>
+    <link href="assets/css/styles.css" rel="stylesheet" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header">
+            <img src="assets/images/smartstart_alt.png" alt="SmartStart" class="center-block" />
+        </div>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>  
+                    </button>
+                    <asp:Label ID="lblHeader" runat="server" Text="Header" class="navbar-brand"></asp:Label>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <asp:ContentPlaceHolder ID="nav" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <li>
+                            <p class="navbar-text">
+                                <asp:Label ID="lblUser" runat="server" Text="User"></asp:Label>,
+                                <asp:LinkButton ID="lbtnLogout" runat="server" Text="LOG OUT?" 
+                                    class="navbar-link" onclick="lbtnLogout_Click"></asp:LinkButton>
+                            </p>   
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="wrapper">
+            <div id="main">
+                <asp:ContentPlaceHolder ID="body" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="footer">
+            <p class="text-muted">&#169; Smart Communications Inc.</p>
+        </div>
+    </form>
+</body>
+</html>

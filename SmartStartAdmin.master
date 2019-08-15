@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/SmartStart.Master" AutoEventWireup="true" CodeBehind="SmartStartAdmin.master.cs" Inherits="CAPRES.SmartStartAdmin" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="nav" runat="server">
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+            aria-haspopup="true" aria-expanded="false">Candidate View</a>
+        <ul class="dropdown-menu">
+            <li><a href="ApplicantHome.aspx">Applicant Home</a></li>
+            <li><a href="PreboardingHome.aspx">Preboarding Home</a></li>
+            <li><a href="HiringHome.aspx">Hired Home</a></li>
+            <li><a href="ApplicantAFE.aspx">Application Details Form</a></li>
+            <li><a href="ApplicantPersonalForm.aspx">Personal Information Form</a></li>
+            <li><a href="ApplicantFamilyForm.aspx">Family Members Form</a></li>
+            <li><a href="ApplicantEmploymentForm.aspx">Employment History Form</a></li>
+            <li><a href="ApplicantOtherQualificationsForm.aspx">Other Qualifications Form</a></li>
+            <li><a href="ApplicantProfessionalReferencesForm.aspx">Professional References Form</a></li>
+            <li><a href="ApplicantPersonalReferencesForm.aspx">Personal References Form</a></li>
+            <li><a href="ApplicantEducationalForm.aspx">Educational Background Form</a></li>
+            <li><a href="ApplicantOrganizationalForm.aspx">Organizational Membership Form</a></li>
+            <li><a href="ApplicantReviewForm.aspx">Review Form</a></li>
+            <li><a href="ApplicantFinished.aspx">Finish Page</a></li>
+        </ul>
+    </li>
+    <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+            aria-haspopup="true" aria-expanded="false">HR View</a>
+        <ul class="dropdown-menu">
+            <li><a href="RecruiterHome.aspx">Recruiter Home</a></li>
+            <li><a href="PreboarderHome.aspx">Preboarder Home</a></li>
+            <li><a href="DataManagerHome.aspx">Data Manager Home</a></li>
+            <li><a href="AdminHome.aspx">Administrator Home</a></li>
+        </ul>
+    </li>
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+    <asp:ContentPlaceHolder ID="body" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
